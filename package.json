@@ -1,52 +1,50 @@
 {
-  "name": "minhaoi-consumo-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "clear;nodemon app",
-    "start:prod": "clear;NODE_ENV=production nodemon app",
-    "test": "clear;nyc --reporter=html --reporter=lcov --reporter=text-lcov --reporter=text --report-dir=test/reports ./node_modules/mocha/bin/mocha ./api/modules/*/test/unit/*.unit.js --timeout 12000",
-    "test:dev": "clear;./node_modules/mocha/bin/mocha ./api/modules/*/test/unit/*.unit.js --timeout 12000",
-    "integration": "clear;./node_modules/mocha/bin/mocha ./api/modules/*/test/integration/*.integration.js",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha ./api/modules/*/test/*/*.js",
-    "lint": "clear;./node_modules/.bin/eslint ./app",
-    "doc:build": "gulp swagger",
-    "doc:edit": "swagger project edit",
-    "wizard": "node ./api/config/wizard",
-    "test:wizard": "clear;./node_modules/mocha/bin/mocha ./test/wizard_test"
-  },
-  "author": "Oi Digital",
-  "license": "ISC",
-  "dependencies": {
-    "mongoose": "^4.13.17",
-    "node-fetch": "^1.7.3",
-    "oi-node-api-framework": "^2.0.22"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-chai-friendly": "^0.4.0",
-    "eslint-plugin-import": "^2.8.0",
-    "find-in-files": "^0.4.0",
-    "gulp": "^3.9.1",
-    "gulp-replace": "^0.6.1",
-    "istanbul": "^0.4.5",
-    "js-yaml": "^3.10.0",
-    "mocha": "^4.1.0",
-    "nyc": "^11.9.0",
-    "pre-commit": "^1.2.2",
-    "rimraf": "^2.6.2",
-    "sinon": "^4.5.0",
-    "slugify": "^1.2.9",
-    "supertest": "^3.2.0",
-    "uuid": "^3.3.2"
-  },
-  "pre-commit": {
-    "run": [
-      "test:dev",
-      "integration"
-    ]
-  }
+	"name": "minhaoi-consumo-backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "clear;nodemon app",
+		"start:prod": "clear;NODE_ENV=production nodemon app",
+		"test": "clear;nyc --reporter=html --reporter=lcov --reporter=text-lcov --reporter=text --report-dir=test/reports ./node_modules/mocha/bin/mocha ./api/modules/*/test/unit/*.unit.js --timeout 12000",
+		"test:dev": "clear;./node_modules/mocha/bin/mocha ./api/modules/*/test/unit/*.unit.js --timeout 12000",
+		"integration": "clear;./node_modules/mocha/bin/mocha ./api/modules/*/test/integration/*.integration.js",
+		"coverage": "istanbul cover ./node_modules/mocha/bin/_mocha ./api/modules/*/test/*/*.js",
+		"lint": "clear;./node_modules/.bin/eslint ./app",
+		"doc:build": "gulp swagger",
+		"doc:edit": "swagger project edit"
+	},
+	"author": "Oi Digital",
+	"license": "ISC",
+	"dependencies": {
+		"mongoose": "^4.13.17",
+		"node-fetch": "^1.7.3",
+		"oi-node-api-framework": "^2.0.22"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-plugin-chai-friendly": "^0.4.0",
+		"eslint-plugin-import": "^2.8.0",
+		"find-in-files": "^0.4.0",
+		"gulp": "^3.9.1",
+		"gulp-replace": "^0.6.1",
+		"istanbul": "^0.4.5",
+		"js-yaml": "^3.10.0",
+		"mocha": "^4.1.0",
+		"nyc": "^11.9.0",
+		"pre-commit": "^1.2.2",
+		"rimraf": "^2.6.2",
+		"sinon": "^4.5.0",
+		"slugify": "^1.2.9",
+		"supertest": "^3.2.0",
+		"uuid": "^3.3.2"
+	},
+	"pre-commit": {
+		"run": [
+			"test:dev",
+			"integration"
+		]
+	}
 }
