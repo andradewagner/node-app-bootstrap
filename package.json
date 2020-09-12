@@ -18,7 +18,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"mongoose": "^4.13.17",
-		"node-fetch": "^1.7.3",
+		"node-fetch": "^2.6.1",
 		"oi-node-api-framework": "^2.0.22"
 	},
 	"devDependencies": {
